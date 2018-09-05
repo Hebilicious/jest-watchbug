@@ -29,3 +29,4 @@ yarn run test:unit
 ```
 yarn run test:e2e
 ```
+# jest-watchbug
