@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" :src="getLogo">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -12,6 +12,14 @@ export default {
   name: "app",
   components: {
     HelloWorld
+  },
+  data() {
+    return { logo: "logo.png" };
+  },
+  computed: {
+    getLogo() {
+      return require(`@/assets/${this.logo}`);
+    }
   }
 };
 </script>
